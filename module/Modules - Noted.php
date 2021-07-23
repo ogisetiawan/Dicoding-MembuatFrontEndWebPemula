@@ -2,8 +2,8 @@
 /*
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:05 
- * @Last Modified by:   ogi.setiawan 
- * @Last Modified time: 2021-07-18 00:06:05 
+ * @Last Modified by: ogi.setiawan
+ * @Last Modified time: 2021-07-23 23:01:18
  */
 //@ DASAR JAVASCRIPT
 //~ Sejarah Javascript
@@ -28,3 +28,16 @@
 //? array ; tipe data yang dapat mengelompokkan lebih dari satu nilai dan menempatkannya dalam satu variabel
 //~ Fungsi
 //? sebagai blok kode atau prosedur yang dapat digunakan secara berulang / merupakan sebuah variabel yang berisi blok logika
+
+//@ BROWSER OBJECT MODEL, DOCUMENT OBJECT MODEL DAN EVENT
+//~ Menambahkan Javascript Di Website
+//? menbamahkan tag script untuk js eksternal lebih baik di akhir.
+//~ Broser Enviorement
+//? kode js berjalan di prangkat browser karena meyediakan browser object model (BOM) dan (DOM)
+//~ DOM ( Document Object Model )
+//? getElementById(); mendapatkan element dari ID (<button id="nama"...)
+//? getElementsByName(); mendapatkan element dari attribute name (<input name="nama"...)
+//? getElementsByClassName(); mendapatkan element dari class name
+//? getElements ByTagName(); mendapatkan element dari sebuah tag (<div>)
+//? querySelector(); mendpatkan element dari element class pertama ( document.querySelector(".button"); / document.querySelector("#attributeID");)
+//? querySelectorAll(); mendpatkan element dari semua element class

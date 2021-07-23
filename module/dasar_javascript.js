@@ -2,7 +2,7 @@
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:01 
  * @Last Modified by: ogi.setiawan
- * @Last Modified time: 2021-07-18 00:12:02
+ * @Last Modified time: 2021-07-23 23:01:28
  */
 //@ VARIABLE
 //! Variable
@@ -137,6 +137,11 @@ for (let index = 1; index <=100; index++) { //? loop biasa, bisa get index/prope
   }
 }
 console.log(evenNumber);
+var str = "1,2,3,4,5,6";
+var temp = new Array();
+// This will return an array with strings "1", "2", etc.
+temp = str.split(",");
+console.log(temp);
 
 //! Function
 const greeting = function(name, language) { //? expression function, with a variable const and without wirite func name
@@ -163,3 +168,12 @@ const power = function(a,b){
   return Math.pow(a,b); //? return fungsi kuadrat
 }
 console.log(power(4, 0.5));
+
+//@ BROWSER ENVIOREMENT
+//! Browser Object Model
+window.alert(1); //? error karena tidak di broswer yg available BOM
+console.log(1);
+//! Console
+console.info('1')
+console.log(1);
+console.error(1);
