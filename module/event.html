@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event World</title>
+    <style>
+        .contents {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid black;
+            border-width: 2px;
+            padding: 15px;
+        }
+
+        #generateButton {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            ;
+        }
+    </style>
+    <link href="assets/css/loader.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- @loader -->
+    <div id="loader" class="">
+        <div class="book">
+            <div class="inner">
+                <div class="left"></div>
+                <div class="middle"></div>
+                <div class="right"></div>
+            </div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <a class="dribbble" href="https://dribbble.com/shots/7199149-Book-Loader" target="_blank"></a>
+    </div>
+
+
+    <div class="contents" align="center" hidden>
+        <button id="incrementButton">Tekan Aku :)</button>
+        <h3 id="caption">Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span></h3>
+        <button id="btnEventListener">addEventListener</button>
+        <button id="btnCustomEvent">customEvent</button>
+    </div>
+
+    <script>
+        function increment() {
+            document.getElementById("count").innerText++;
+
+            if (document.getElementById("count").innerText == 7) {
+                const hiddenMessage = document.createElement("h4");
+                hiddenMessage.innerText = "Selamat! Anda menemukan hadiah tersembunyi..."
+                const image = document.createElement("img");
+                image.setAttribute("src", "https://i.ibb.co/0V49VRZ/catto.jpg");
+                const contents = document.querySelector(".contents");
+                contents.appendChild(hiddenMessage).appendChild(image);
+            }
+        }
+        function loader() {
+            const contents = document.querySelector(".contents");
+            const loader = document.getElementById("loader");
+            //? kalo masih di local langsung muncul, kasih timeout
+            setTimeout(function () {
+                loader.setAttribute("hidden", true);
+                contents.removeAttribute("hidden");
+            }, 1500);
+        }
+        function test1() {
+            alert(1);
+        }
+        function test2() {
+            alert(2)
+        }
+        function customEventHandler(e) {
+            const caption = document.getElementById("caption");
+            caption.innerText = "Anda telah merubah custom event click";
+        }
+
+        // -------------------------------------------------------------- //
+
+        const eventListener = document.getElementById('btnEventListener');
+        const changeCaption = new Event("changeCaption");
+
+        document.body.onload = loader; //? event handler onload pada body html yang sedang diload
+        document.getElementById("incrementButton").onclick = increment; //? event handler onclick pada elemen
+
+        //? event handler addEventListener pada sebuah element, 
+        //? kita bisa menjalankan 2 fungsi sekaligus tanpa menimpa
+        eventListener.addEventListener('click', test1);
+        eventListener.addEventListener('click', test2);
+
+        //? event handler addEventListener load
+        window.addEventListener('load', function () {
+            const customEvent = document.getElementById("btnCustomEvent"); //elemen button
+            customEvent.addEventListener("changeCaption", customEventHandler); // menginisial event menjadi "changeCaption"
+            customEvent.addEventListener("click", function () { // merubah event changeCaption itu adalah event click
+                customEvent.dispatchEvent(changeCaption); //? init new even
+            });
+        });
+
+    </script>
+</body>
+
+</html>

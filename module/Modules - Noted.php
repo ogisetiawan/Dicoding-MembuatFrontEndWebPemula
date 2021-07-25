@@ -3,7 +3,7 @@
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:05 
  * @Last Modified by: ogi.setiawan
- * @Last Modified time: 2021-07-23 23:01:18
+ * @Last Modified time: 2021-07-24 20:20:18
  */
 //@ DASAR JAVASCRIPT
 //~ Sejarah Javascript
@@ -41,3 +41,9 @@
 //? getElements ByTagName(); mendapatkan element dari sebuah tag (<div>)
 //? querySelector(); mendpatkan element dari element class pertama ( document.querySelector(".button"); / document.querySelector("#attributeID");)
 //? querySelectorAll(); mendpatkan element dari semua element class
+//~ Event
+//? onload; event ketika halaman web pertama kali di load
+//? onpageshow; event ketika halaman web dikunjungi kembali
+//? event handler; menulis event didalam js langsung yg meninisialisasi sebuah fungsi (  document.body.onload = namaFungsi' )
+//? inline event handler; menulis event lgsung di sbuah atribute html ( onclick='namaFungsi()' )
+//? addEventListener ; sama dgn event handler dan bisa menjalankan 2 fungsi sekaligus ( window.addEventListener('load', namaFungsi) )

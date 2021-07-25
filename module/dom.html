@@ -23,25 +23,22 @@
         <div class="button-group" id="buttonGroup">
             <div id="ukuran" class="button"><button>Merubah Ukuran</button></div>
             <div class="button" onclick="ubahAttributeBtn()"><button>Menonaktifkan Button</button></div>
-            <div class="button" onclick="ubahText()"><button>Merubah Text</button></div>
+            <div class="button" onclick="ubahText()"><button>Merubah Text</button></div> 
             <div class="button" onclick="ubahStyle()"><button>Merubah Style Button</button></div>
             <div class="button" onclick="tambahButton()"><button>Menambah Button</button></div>
             <div class="button" id="refresh" onclick="window.location.reload()"><button>Refresh</button></div>
         </div>
     </div>
     <script>
-        //? mencari elemen ID, dan menbambahkan ke dalam fungsi tertentu
-        document.getElementById("ukuran").addEventListener("click", ubahUkuran); // call func ubahUkuran
-
         function ubahUkuran() {
             const gambar = document.getElementById("gambar");
             let lebar = window.prompt('Masukan lebar'); //? set window prompt lebar (popup)
             let tinggi = window.prompt('Masukan tinggi');
-            gambar.setAttribute('width', lebar); 
+            gambar.setAttribute('width', lebar);
             gambar.setAttribute('height', tinggi);
         }
 
-        //? cara memnggil function dari attributte onclick
+        //? cara memangil inline event handler onclick
         function ubahAttributeBtn() {
             let nomorButton = window.prompt('Masukan nomor button'); //? set window prompt lebar (popup)
             let classButton = document.querySelectorAll('.button')[nomorButton]; //? mencari tag melalui class
@@ -77,11 +74,13 @@
             newButton.innerHTML = '<button>Button Baru</button>'; // add tag HTML button
             if (window.confirm('Apakah ingin menambah button di akhir?')) { //? window confirm
                 button.appendChild(newButton);  // menambah tag HTML di akhir (child)
-            }else{
+            } else {
                 const buttonAwal = document.getElementById('ukuran');
                 button.insertBefore(newButton, buttonAwal); // menambah tag HTML di elemen tertentu
             }
         }
+         //? mencari elemen ID, dan menbambahkan ke dalam fungsi tertentu, beda dgn inline event handler
+         document.getElementById("ukuran").addEventListener("click", ubahUkuran); // call func ubahUkuran
     </script>
 </body>
 
