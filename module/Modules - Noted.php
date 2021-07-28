@@ -3,7 +3,7 @@
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:05 
  * @Last Modified by: ogi.setiawan
- * @Last Modified time: 2021-07-24 20:20:18
+ * @Last Modified time: 2021-07-28 21:52:32
  */
 //@ DASAR JAVASCRIPT
 //~ Sejarah Javascript
@@ -32,9 +32,13 @@
 //@ BROWSER OBJECT MODEL, DOCUMENT OBJECT MODEL DAN EVENT
 //~ Menambahkan Javascript Di Website
 //? menbamahkan tag script untuk js eksternal lebih baik di akhir.
-//~ Broser Enviorement
+//~ BrWoser Enviorement
 //? kode js berjalan di prangkat browser karena meyediakan browser object model (BOM) dan (DOM)
+//~ BOM ( Browser Object Model)
+//? Objek JavaScript yang tersedia di browser yang dapat digunakan untuk mengontrol browser.
+//? contohnya alert(), prompt dan console
 //~ DOM ( Document Object Model )
+//? Objek JavaScript yang tersedia di browser yang dapat digunakan untuk mengontrol dan memanipulasi konten yang ditampilkan pada website.
 //? getElementById(); mendapatkan element dari ID (<button id="nama"...)
 //? getElementsByName(); mendapatkan element dari attribute name (<input name="nama"...)
 //? getElementsByClassName(); mendapatkan element dari class name
@@ -42,8 +46,11 @@
 //? querySelector(); mendpatkan element dari element class pertama ( document.querySelector(".button"); / document.querySelector("#attributeID");)
 //? querySelectorAll(); mendpatkan element dari semua element class
 //~ Event
+//? macam-macam event, form event, keyboard event, clipboard event, mouse event dll
 //? onload; event ketika halaman web pertama kali di load
 //? onpageshow; event ketika halaman web dikunjungi kembali
 //? event handler; menulis event didalam js langsung yg meninisialisasi sebuah fungsi (  document.body.onload = namaFungsi' )
 //? inline event handler; menulis event lgsung di sbuah atribute html ( onclick='namaFungsi()' )
 //? addEventListener ; sama dgn event handler dan bisa menjalankan 2 fungsi sekaligus ( window.addEventListener('load', namaFungsi) )
+//~ Form
+//? event.preventDefault() ; berfungsi untuk mencegah halaman load pada web
