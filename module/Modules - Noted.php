@@ -3,7 +3,7 @@
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:05 
  * @Last Modified by: ogi.setiawan
- * @Last Modified time: 2021-07-28 21:52:32
+ * @Last Modified time: 2021-07-31 22:46:05
  */
 //@ DASAR JAVASCRIPT
 //~ Sejarah Javascript
@@ -54,3 +54,14 @@
 //? addEventListener ; sama dgn event handler dan bisa menjalankan 2 fungsi sekaligus ( window.addEventListener('load', namaFungsi) )
 //~ Form
 //? event.preventDefault() ; berfungsi untuk mencegah halaman load pada web
+
+//@ WEB STORAGE
+//? salah satu web API yg dapat menyimpan data secara lokal ( dr sisi client )
+//? data disimpan berdasarkan domain, web storage dapat menampung 10MB dalam satu domain
+//? tidak semua browser tersedia browser storage
+//~ Local Storage
+//? Data yang disimpan tidak akan hilang bila browser atau tabs browser ditutup kecuali jika kita menghapusnya.
+//~ Session Storage
+//? Data masih ada jika direfresh tetapi akan hilang jika browser ditutup atau tab telah di close
+//? setItem(key, value); untuk menambahkan nilai pada session/local storage
+//? getItem(key); untuk mengambil value pada sebuah session/local storage
