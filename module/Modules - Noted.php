@@ -3,7 +3,7 @@
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:05 
  * @Last Modified by: ogi.setiawan
- * @Last Modified time: 2021-07-31 22:46:05
+ * @Last Modified time: 2021-08-01 20:30:15
  */
 //@ DASAR JAVASCRIPT
 //~ Sejarah Javascript

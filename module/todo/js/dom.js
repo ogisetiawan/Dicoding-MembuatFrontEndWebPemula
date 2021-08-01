@@ -1,13 +1,19 @@
 const UNCOMPLETED_LIST_TODO_ID = "todos"; //? variable global 
 const COMPLETED_LIST_TODO_ID = "completed-todos"; 
+const TODO_ITEMID = "itemId";
 
 function addTodo() {
     const uncompletedTODOList = document.getElementById(UNCOMPLETED_LIST_TODO_ID ); //? get element from var global
     const textTodo = document.getElementById("title").value;
     const timestamp = document.getElementById("date").value;
     
-    const todo = makeTodo(textTodo, timestamp); 
+    const todo = makeTodo(textTodo, timestamp);
+    const todoObject = composeTodoObject(textTodo, timestamp, false);
+  
+    todo[TODO_ITEMID] = todoObject.id;
+    todos.push(todoObject);
     uncompletedTODOList.append(todo); //? append tag html and text to element todos (html)
+    updateDataToStorage();
 }
 
 function makeTodo(data, timestamp, isCompleted) { //? param isCompleted is boolean
@@ -47,10 +53,15 @@ function addTaskToCompleted(taskElement) { //? param => tag html and data
     const taskTimestamp = taskElement.querySelector(".inner > p").innerText; //? get text tag p
  
     const newTodo = makeTodo(taskTitle, taskTimestamp, true); 
+    const todo = findTodo(taskElement[TODO_ITEMID]);
+    todo.isCompleted = true;
+    newTodo[TODO_ITEMID] = todo.id;
+
     const listCompleted = document.getElementById(COMPLETED_LIST_TODO_ID); //? get element for from global
     listCompleted.append(newTodo); //? passing tag html and data to elemen id complete-todos
 
     taskElement.remove(); //? remove tag html and data
+    updateDataToStorage();
 } 
 
 function createCheckButton() {
@@ -66,9 +77,14 @@ function undoTaskFromCompleted(taskElement){
     
     const listUncompleted = document.getElementById(UNCOMPLETED_LIST_TODO_ID); //? get element todos
     const newTodo = makeTodo(taskTitle, taskTimestamp, false);
-    listUncompleted.append(newTodo); //? passing tag html and data to elemen id 'todos'
+    const todo = findTodo(taskElement[TODO_ITEMID]);
+    todo.isCompleted = false;
+    newTodo[TODO_ITEMID] = todo.id;
 
+    listUncompleted.append(newTodo); //? passing tag html and data to elemen id 'todos'
     taskElement.remove();
+    
+    updateDataToStorage();
 }
 
 function createUndoButton() {
@@ -78,7 +94,11 @@ function createUndoButton() {
 }
 
 function removeTaskFromCompleted(taskElement) {
+    const todoPosition = findTodoIndex(taskElement[TODO_ITEMID]);
+    todos.splice(todoPosition, 1);
+
     taskElement.remove();
+    updateDataToStorage();
 }
 
 function createTrashButton() {
