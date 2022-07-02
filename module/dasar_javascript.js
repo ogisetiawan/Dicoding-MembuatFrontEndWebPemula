@@ -1,8 +1,8 @@
 /*
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:01 
- * @Last Modified by: ogi.setiawan
- * @Last Modified time: 2021-07-24 20:13:48
+ * @Last Modified by: ogisetiawan21@gmail.com
+ * @Last Modified time: 2022-07-03 00:44:02
  */
 //@ VARIABLE
 //! Variable
@@ -177,3 +177,43 @@ console.log(1);
 console.info('1')
 console.log(1);
 console.error(1);
+
+//@ MODE STRICT
+//? mode yang memaksakan penulisan program JavaScript yang baik dan aman
+"use strict";
+x = 9;       // ini akan dianggap error karena variabel belum dideklarasikan
+showAngka();   // ini akan dianggap error karena function belum dideklarasikan
+ 
+function showAngka() {
+  var x = 9;
+  console.log(x)
+}
+
+//@ OTHER
+
+var arr = [];
+for (var i = 0; i < 5; i++) {
+    arr.push({
+        key: i,
+        mail: ['ucup@mail.com', 'ogi@mail.com']
+    });
+}
+
+var index = arr.map(function (arrs) { return arrs.key; }).indexOf(3);
+
+console.log(arr);
+console.log(arr[index].mail[1]);
+const indexes = arr[index].mail.indexOf(arr[index].mail[1]);
+if (indexes > -1) {
+  arr[index].mail.splice(indexes, 1);
+}
+console.log(arr);
+
+
+data = "email1, email2, email3";
+let rec = '';
+let recipient = data.split(", ");
+for (const recipients of recipient){
+  rec += recipients;
+}
+console.log(rec);
