@@ -2,7 +2,7 @@
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:01 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-07-03 00:44:02
+ * @Last Modified time: 2022-07-13 00:13:49
  */
 //@ VARIABLE
 //! Variable
@@ -217,3 +217,15 @@ for (const recipients of recipient){
   rec += recipients;
 }
 console.log(rec);
+
+
+let test =  new Object();
+test['1'] = 'igset'
+test['custName'] = 'gdfgdfgsw dfsd';
+console.log(test);
+
+
+//~ remove array
+var imageList = ['ogisetiawan','ucup'];
+var index = imageList.indexOf('ucup'); // 1
+console.log(index);
