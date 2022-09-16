@@ -37,7 +37,7 @@ main {
 .input_section {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 25px 125px;
 }
 
 h2.judul {
@@ -148,7 +148,7 @@ input:focus {
 }
 
 .search_section > form {
-  padding: 16px;
+  padding: 25px;
   width: 100%;
   grid-template-columns: auto 1fr 0.5fr;
   grid-gap: 10px;
@@ -193,7 +193,7 @@ p {
 
 .book_shelf > .book_list > .book_item > .action > button {
   border: 0;
-  margin: 0 5px 0 0;
+  margin: 20px 5px 0 0;
   background-color: #4caf50;
   border: none;
   color: white;
@@ -222,10 +222,23 @@ p {
   background-color: #f44336;
   color: white;
   border: 2px solid #f44336;
+  float: right!important;
 }
 
 .book_shelf > .book_list > .book_item > .action > .red:hover {
   background-color: #f44336;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .warn {
+  background-color: #ffa62b;
+  color: white;
+  border: 2px solid #ffa62b;
+  float: right!important;
+}
+
+.book_shelf > .book_list > .book_item > .action > .warn:hover {
+  background-color: #ffa62b;
   color: white;
 }
 

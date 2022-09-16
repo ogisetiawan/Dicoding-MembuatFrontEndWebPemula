@@ -34,10 +34,10 @@
                     <input id="inputBookYear" type="number" required>
                 </div>
                 <div class="input_inline">
-                    <label for="inputBookIsComplete">Sudah dibaca</label>
+                    <label for="inputBookIsComplete">Selesai dibaca</label>
                     <input id="inputBookIsComplete" type="checkbox" style="width: auto;">
                 </div>
-                <button id="bookSubmit" type="submit">Submit <span class="fa fa-paper-plane-o"></span></button>
+                <button id="bookSubmit" type="submit"><span class="fa fa-save"></span> Simpan ke <strong id="labelList">[Belum dibaca] </strong></button>
             </form>
         </section>
         <hr class="hr-1">
@@ -45,8 +45,12 @@
             <h2 class="judul" style="text-align: center;">Cari Buku</h1>
                 <form id="searchBook">
                     <div class="searchBar">
-                        <input id="searchBookTitle" type="text" name="searchBookTitle" placeholder="Cari Buku ..."
-                            value="" />
+                        <input id="searchBookTitle" type="text" name="searchBookTitle" placeholder="Cari Buku ..." value=""
+                        style="
+                            border-color: #ffa62b;
+                            outline: 0;
+                            box-shadow: 0 0 0 0.2rem rgb(255 166 43 / 35%);
+                        "/>
                         <button id="searchSubmit" type="submit" name="searchSubmit">
                             <span class="fa fa-search"></span>
                         </button>
@@ -58,7 +62,7 @@
     <section class="content">
         <div class="left-content">
             <section class="book_shelf">
-                <h2 class="judul">Belum selesai dibaca</h2>
+                <h2 class="judul">Belum dibaca</h2>
                 <div id="incompleteBookshelfList" class="book_list">
                    
                 </div>

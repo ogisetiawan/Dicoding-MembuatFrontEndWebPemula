@@ -2,7 +2,7 @@
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:01 
  * @Last Modified by: ogisetiawan21@gmail.com
- * @Last Modified time: 2022-07-13 00:13:49
+ * @Last Modified time: 2022-09-14 14:45:47
  */
 //@ VARIABLE
 //! Variable
@@ -41,7 +41,7 @@ const discount = isMember ? 0.1 : 0; //? jadi ga perlu check kondisi, karena sud
 console.log("Anda mendapatkan diskon sebesar " + discount * 100 + "%");
 
 //! If/Else statement
-letscore = 88;
+let score = 60;
 if (score >= 90) {
   result = "Selamat! Anda mendapatkan nilai A.";
 } else if (score >= 80 && score <= 89) {
@@ -190,7 +190,6 @@ function showAngka() {
 }
 
 //@ OTHER
-
 var arr = [];
 for (var i = 0; i < 5; i++) {
     arr.push({

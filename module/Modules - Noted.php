@@ -2,8 +2,8 @@
 /*
  * @Author: ogi.setiawan 
  * @Date: 2021-07-18 00:06:05 
- * @Last Modified by: ogi.setiawan
- * @Last Modified time: 2021-08-01 20:30:15
+ * @Last Modified by: ogisetiawan21@gmail.com
+ * @Last Modified time: 2022-09-14 13:52:02
  */
 //@ DASAR JAVASCRIPT
 //~ Sejarah Javascript

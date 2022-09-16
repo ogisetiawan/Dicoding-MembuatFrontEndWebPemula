@@ -1,4 +1,4 @@
-const BOOKS_KEY = "BOOKSHELF_APPS_OGI";
+const BOOKS_KEY = "BOOKSHELF_APPS_OGI"; //? initiali key storage
 let books = [];
 
 function isStorageSupported() {
